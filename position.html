@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        .sticky-box {
+            position: sticky;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            border: 2px solid #b22222;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Position Property</h1>
+    <p>The position property in CSS is used to specify the positioning method for an element. It can take several values, including:</p>
+    <ul>
+        <li><strong>static</strong>: The default value. The element is positioned according to the normal flow of the document.</li>
+        <li><strong>relative</strong>: The element is positioned relative to its normal position.</li>
+        <li><strong>absolute</strong>: The element is positioned relative to its nearest positioned ancestor (not static).</li>
+        <li><strong>fixed</strong>: The element is positioned relative to the viewport and does not move when scrolled.</li>
+        <li><strong>sticky</strong>: The element is treated as relative until it crosses a specified threshold, at which point it becomes fixed.</li>
+    </ul>
+
+    <p>Example:</p>
+    <div style="position: relative; top: 50px; left: 100px; width: 200px; height: 200px; background-color: lightblue;">
+        <div style="position: absolute; top: 50px; left: 50px; width: 100px; height: 100px; background-color: coral;">
+            Absolute Positioned Box
+        </div>
+        <div style="position: fixed;  top:20px; left: 20px; width: 100px; height: 100px; background-color: lightgreen;">
+        Fixed Positioned Box    
+        </div>
+        <div class="sticky-box">
+            Sticky Positioned Box
+        </div>
+    </div>
+
+    <p><strong>Sticky box properties used:</strong> <code>position: sticky;</code> and <code>top: 10px;</code>. The box stays in normal flow until the page scroll reaches 10px from the top, then it sticks.</p>
+    <div style="height: 1200px; background: linear-gradient(white, #f5f5f5);">
+        Scroll down to see the sticky box in action.
+    </div>
+
+    
+</body>
+</html>
